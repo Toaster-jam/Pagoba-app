@@ -1,6 +1,6 @@
 <script setup>
 import AuthenticatedLayout from '@/Layouts/AuthenticatedLayout.vue';
-
+import DropDown from '@/Components/Dropdown.vue';
 import { Head } from '@inertiajs/vue3';
 defineProps(['user']);
 </script>
@@ -21,10 +21,9 @@ defineProps(['user']);
                 </div>
             </div>
         </div>
+        <DropDown>
 
-        <template #footer>
-            <h2 class="font-semibold text-xl text-gray-800 leading-tight">Footer</h2>
-        </template>
+        </DropDown>
 
     </AuthenticatedLayout>
 </template>
