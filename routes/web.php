@@ -22,6 +22,9 @@ Route::get('/dashboard', function () {
 Route::get('/gif-library', function () {
     return Inertia::render('giflibrary/Library');
 })->middleware(['auth', 'verified'])->name('gif-library');
+Route::get('/leaderboard', function () {
+    return Inertia::render('Profile/Leaderboard');
+})->middleware(['auth', 'verified'])->name('leaderboard');
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
