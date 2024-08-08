@@ -25,6 +25,8 @@ const showingNavigationDropdown = ref(false);
                                         class="block h-9 w-auto fill-current text-gray-800"
                                     />
                                 </Link>
+                                 <Link :href="route('account')">
+                                </Link>
                             </div>
 
                             <!-- Navigation Links -->
@@ -34,6 +36,11 @@ const showingNavigationDropdown = ref(false);
                                 </NavLink>
                                   <NavLink :href="route('leaderboard')" :active="route().current('leaderboard')">
                                     Leaderboard
+                                </NavLink>
+                            </div>
+                            <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
+                                <NavLink :href="route('account')" :active="route().current('account')">
+                                    Account
                                 </NavLink>
                             </div>
                             <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
@@ -155,6 +162,13 @@ const showingNavigationDropdown = ref(false);
             <main>
                 <slot />
             </main>
+
+            <div class="bg-white shadow" v-if="$slots.footer">
+                <div class="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
+                    <slot name="footer" />
+                </div>
+            </div>
+
         </div>
     </div>
 </template>
