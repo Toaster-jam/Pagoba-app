@@ -10,11 +10,34 @@ import { Head } from '@inertiajs/vue3';
         <template #header>
             <h2 class="font-semibold text-xl text-gray-800 leading-tight">Settings</h2>
         </template>
-
-        <div class="py-12">
-            <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
-                <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
-                    <div class="p-6 text-gray-900">You're logged in!</div>
+        
+        <!--Notifications Button--> 
+        <div class="flex justify-center"> 
+            <div class="pt-3">
+                <div class="sm:px-6 lg:px-8">
+                    <div class="outline outline-1 outline-gray-300 w-96 bg-white overflow-hidden shadow-sm sm:rounded-lg p-4">
+                        Notifications
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="flex justify-center"> 
+            <!--Account Privacy Button-->
+            <div class="pt-3">
+                <div class="sm:px-6 lg:px-8">
+                    <div class="outline outline-1 outline-gray-300 w-96 bg-white overflow-hidden shadow-sm sm:rounded-lg p-4">
+                        Account Privacy
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="flex justify-center"> 
+            <!--GIF+ Button-->
+            <div class="pt-3">
+                <div class="sm:px-6 lg:px-8">
+                    <div class="outline outline-1 outline-gray-300 w-96 bg-white overflow-hidden shadow-sm sm:rounded-lg p-4 <!--text-center text-red-50-->">
+                        Upgrade to GIF+
+                    </div>
                 </div>
             </div>
         </div>
