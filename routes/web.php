@@ -16,6 +16,10 @@ Route::get('/', function () {
     ]);
 });
 
+Route::get('settings', function () {
+    return Inertia::render('Settings/Settings');
+})->middleware(['auth', 'verified'])->name('settings');
+
 Route::get('/dashboard',
 [DashboardController::class, 'index']   
 )->middleware(['auth', 'verified'])->name('dashboard');
