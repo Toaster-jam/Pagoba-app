@@ -20,6 +20,10 @@ Route::get('/dashboard',
 [DashboardController::class, 'index']   
 )->middleware(['auth', 'verified'])->name('dashboard');
 
+Route::get('/gif-library', function () {
+    return Inertia::render('giflibrary/Library');
+})->middleware(['auth', 'verified'])->name('gif-library');
+
 Route::get('/leaderboard', function () {
     return Inertia::render('Profile/Leaderboard');
 })->middleware(['auth', 'verified'])->name('leaderboard');
@@ -33,3 +37,4 @@ Route::middleware('auth')->group(function () {
 Route::get('/account',[AccountController::class,'show'])->middleware(['auth', 'verified'])->name('account');
 
 require __DIR__.'/auth.php';
+
