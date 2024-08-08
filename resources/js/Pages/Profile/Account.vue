@@ -1,7 +1,8 @@
 <script setup>
 import AuthenticatedLayout from '@/Layouts/AuthenticatedLayout.vue';
 import DropDown from '@/Components/Dropdown.vue';
-import { Head } from '@inertiajs/vue3';
+import PrimaryButton from '@/Components/PrimaryButton.vue';
+import { Head, router } from '@inertiajs/vue3';
 defineProps(['user']);
 </script>
 
@@ -14,9 +15,16 @@ defineProps(['user']);
         </template>
 
         <div class="py-12">
-            <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
+            <div class="max-w-7xl mx-auto px-6 lg:px-8">
                 <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
-                    <div class="p-6 text-gray-900">{{user.name}}</div>
+                    
+                    <div class="flex justify-between p-4">
+                        <div class="p-2 text-gray-900">{{user.name}}</div>
+                        
+                        <PrimaryButton @click="router.visit(route('profile.edit'))">
+                           Edit
+                        </PrimaryButton>
+                    </div>
 
                 </div>
             </div>
