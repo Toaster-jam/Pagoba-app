@@ -2,6 +2,8 @@
 import AuthenticatedLayout from '@/Layouts/AuthenticatedLayout.vue';
 import GifFeed from '@/Components/GifFeed.vue';
 import { Head } from '@inertiajs/vue3';
+
+defineProps (['posts'])
 </script>
 
 <template>
