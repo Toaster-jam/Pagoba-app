@@ -1,14 +1,17 @@
 <script setup>
 import AuthenticatedLayout from '@/Layouts/AuthenticatedLayout.vue';
+import GifFeed from '@/Components/GifFeed.vue';
 import { Head } from '@inertiajs/vue3';
+
+defineProps (['posts'])
 </script>
 
 <template>
-    <Head title="Dashboard" />
+    <Head title="Feed" />
 
     <AuthenticatedLayout>
         <template #header>
-            <h2 class="font-semibold text-xl text-gray-800 leading-tight">Dashboard</h2>
+            <h2 class="font-semibold text-xl text-gray-800 leading-tight">Feed</h2>
         </template>
 
         <div class="py-12">
@@ -16,7 +19,14 @@ import { Head } from '@inertiajs/vue3';
                 <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
                     <div class="p-6 text-gray-900">You're logged in!</div>
                 </div>
+
+                <GifFeed/>
+
             </div>
+        </div>
+
+        <div>
+            
         </div>
     </AuthenticatedLayout>
 </template>
