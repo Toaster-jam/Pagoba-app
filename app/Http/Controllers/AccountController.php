@@ -1,5 +1,14 @@
 <?php
 
-namespace App\Http\Controllers
+namespace App\Http\Controllers;
 
-class Account extends Controller
+use Inertia\Inertia;
+use Inertia\Response;
+
+class AccountController extends Controller
+{
+    public function show(): Response
+    {
+        return Inertia::render('Profile/Account');
+    }
+}
