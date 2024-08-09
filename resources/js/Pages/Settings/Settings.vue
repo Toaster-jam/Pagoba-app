@@ -1,6 +1,8 @@
 <script setup>
 import AuthenticatedLayout from '@/Layouts/AuthenticatedLayout.vue';
 import { Head } from '@inertiajs/vue3';
+import NavLink from '@/Components/NavLink.vue';
+
 </script>
 
 <template>
@@ -37,6 +39,46 @@ import { Head } from '@inertiajs/vue3';
                 <div class="sm:px-6 lg:px-8">
                     <div class="outline outline-1 outline-gray-300 w-96 bg-white overflow-hidden shadow-sm sm:rounded-lg p-4 <!--text-center text-red-50-->">
                         Upgrade to GIF+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="flex justify-center"> 
+            <!--GIF+ Button-->
+            <div class="pt-3">
+                <div class="sm:px-6 lg:px-8">
+                    <div class="outline outline-1 outline-gray-300 w-96 bg-white overflow-hidden shadow-sm sm:rounded-lg p-4 text-slate-950 text-base">
+                        Network Settings
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="flex justify-center"> 
+            <!--GIF+ Button-->
+            <NavLink class="pt-3" :href="route('profile.edit')">
+                <div class="sm:px-6 lg:px-8">
+                    <div class="outline outline-1 outline-gray-300 w-96 bg-white overflow-hidden shadow-sm sm:rounded-lg p-4 text-slate-950 text-base">
+                        Manage Profile
+                    </div>
+                </div>
+            </NavLink>
+        </div>
+        <div class="flex justify-center"> 
+            <!--GIF+ Button-->
+            <div class="pt-3">
+                <div class="sm:px-6 lg:px-8">
+                    <div class="outline outline-1 outline-gray-300 w-96 bg-white overflow-hidden shadow-sm sm:rounded-lg p-4 <!--text-center text-red-50-->">
+                        Logout
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="flex justify-center"> 
+            <!--GIF+ Button-->
+            <div class="pt-3">
+                <div class="sm:px-6 lg:px-8">
+                    <div class="outline outline-1 outline-gray-300 w-96 bg-white overflow-hidden shadow-sm sm:rounded-lg p-4">
+                        Delete Account
                     </div>
                 </div>
             </div>
