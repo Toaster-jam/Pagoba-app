@@ -61,7 +61,7 @@ onMounted(async () => {
 
     <AuthenticatedLayout>
         <template #header>
-            <h2 class="font-semibold text-xl text-gray-800 leading-tight">GIF Leaderboard</h2>
+            <h2 class="font-semibold text-x1 text-gray-800 leading-tight">GIF Leaderboard</h2>
         </template>
     <!-- {name: "nice name", category_encoded: "category_name", subcategory_encoded: "subcategory_name"} -->
        
@@ -73,7 +73,12 @@ onMounted(async () => {
                     <select v-model="selectedValue" name="cars" id="cars">
             <option v-for="category in categories" :value="category">{{ category.name }}</option>
         </select>
+<<<<<<< Updated upstream
                     <div class="p-6 text-gray-900">Top 100 Best Gifs!</div>
+=======
+        
+                    <div class="p-9 text-gray-900">Top 100 Best Gifs!</div>
+>>>>>>> Stashed changes
                     <div ref="gifGridContainer" id="gif-grid"></div>
                 </div>
             </div>
