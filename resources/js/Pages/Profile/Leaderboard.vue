@@ -21,9 +21,9 @@ const gifGridContainer = ref(null);
 function render() {
     return renderGrid({
         fetchGifs,
-        width: 500,
+        width: 1300,
         columns: 3,
-        gutter: 6,
+        gutter: 10,
     }, gifGridContainer.value);
 }
 
@@ -73,7 +73,7 @@ onMounted(async () => {
                     <select v-model="selectedValue" name="cars" id="cars">
             <option v-for="category in categories" :value="category">{{ category.name }}</option>
         </select>
-                    <div class="p-6 text-gray-900">Top 100 Best Gifs!</div>
+                    <div class="p-9 text-gray-900">Top 100 Best Gifs!</div>
                     <div ref="gifGridContainer" id="gif-grid"></div>
                 </div>
             </div>
