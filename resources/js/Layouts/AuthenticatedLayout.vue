@@ -36,6 +36,21 @@ const showingNavigationDropdown = ref(false);
                                     Leaderboard
                                 </NavLink>
                             </div>
+                            <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
+                                <NavLink :href="route('account')" :active="route().current('account')">
+                                    Account
+                                </NavLink>
+                            </div>
+                             <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
+                                <NavLink :href="route('settings')" :active="route().current('settings')">
+                                    Settings
+                                </NavLink>
+                            </div>
+                            <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
+                                <NavLink :href="route('gif-library')" :active="route().current('gif-library')">
+                                    GIF_Library
+                                </NavLink>
+                            </div>
                         </div>
 
                         <div class="hidden sm:flex sm:items-center sm:ms-6">
@@ -150,6 +165,13 @@ const showingNavigationDropdown = ref(false);
             <main>
                 <slot />
             </main>
+
+            <div class="bg-white shadow" v-if="$slots.footer">
+                <div class="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
+                    <slot name="footer" />
+                </div>
+            </div>
+
         </div>
     </div>
 </template>
